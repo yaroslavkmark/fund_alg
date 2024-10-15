@@ -12,15 +12,14 @@ long long str_to_ll(const char *str, int base) {
     long long res = 0;
     long long power = 1;
     int len = strlen(str);
-    int sign = 1;
+    int flag = 0;
 
     if (str[0] == '-') {
-        sign = -1;
-        str++;
-        len--;
+        power = -1;
+        flag = 1;
     }
 
-    for (int i = len - 1; i >= 0; i--) {
+    for (int i = len - 1; i >= flag; i--) {
         char c = str[i];
         int digit;
 
@@ -34,17 +33,39 @@ long long str_to_ll(const char *str, int base) {
             errno = ERANGE;
             return LLONG_MAX;
         }
+        if (flag){
+            if (res < LLONG_MIN + llabs(digit * power)) {
+                errno = ERANGE;
+                //printf("%d \n", res > LLONG_MAX + llabs(digit * power));
 
-        if (res > (LLONG_MAX - digit) / power) {
-            errno = ERANGE;
-            return LLONG_MAX;
+                return LLONG_MIN;
+            }
+        }
+        else{
+            if (res > LLONG_MAX  - llabs(digit * power) || (res == LLONG_MAX / base && digit > LLONG_MAX % base)) {
+                errno = ERANGE;
+                //printf("%d \n", res > LLONG_MAX + llabs(digit * power));
+
+                return LLONG_MAX;
+            }
         }
 
+
         res += digit * power;
-        power *= base;
+//        printf("%lld\n", res);
+
+        if ((flag && i > 1) || (!flag && i)){
+            if (power > LLONG_MAX / base || power < LLONG_MIN / base) {
+                // printf("%d %d z\n", len, i);
+                errno = ERANGE;
+                return LLONG_MAX;
+            }
+            power *= base;
+        }
+//        power *= base;
     }
 
-    return res * sign;
+    return res;
 }
 
 char *ll_to_str(long long num, int base) {
@@ -141,7 +162,7 @@ int main() {
             errno = 0;
             continue;
         }
-
+        //printf("%lld\n", num);
         if (llabs(num) > max_abs) {
             max_abs = llabs(num);
             max_num = num;

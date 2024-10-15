@@ -11,6 +11,7 @@
 enum ret_type_t{
     SUCCESS,    //Успех
     ERROR_OPEN,  //Не удалось открыть файл
+    ERROR_THE_SAME_FILE
 };
 
 int find_min_base(const char *str) {
@@ -67,6 +68,7 @@ long long convert_to_decimal(const char *str, int base) {
             }
         }
         decimal += digit * power;
+        printf("%lld\n", decimal);
 
         if ((flag && i > 1) || (!flag && i)){
             if (power > LLONG_MAX / base || power < LLONG_MIN / base) {
@@ -129,38 +131,35 @@ int f(const char *name_input_file, const char *name_output_file){
     return SUCCESS;
 }
 
-int strlen_custom(const char *s) {
-    int length = 0;
-    while (s[length] != '\0') {
-        length++;
-    }
-    return length;
-}
+int is_same_file(char *input_file, char *output_file) {
 
-
-int f1(char *s1, char *s2) {
-    const char *prefix = "./";
-    int prefix_length = strlen_custom(prefix);
-    int s1_length = strlen_custom(s1);
-
-
-    if (strlen_custom(s2) != prefix_length + s1_length) {
-        return 0;
-    }
-
-    for (int i = 0; i < prefix_length; i++) {
-        if (s2[i] != prefix[i]) {
-            return 0;
+    char *token1 = strrchr(input_file, '/');
+    char *token2 = strrchr(output_file, '/');
+    if (token1 != NULL && token2 != NULL){
+        token1 += 1;
+        token2 += 1;
+        if (!strcmp(token1, token2)){
+            return ERROR_THE_SAME_FILE;
         }
     }
-
-    for (int i = 0; i < s1_length; i++) {
-        if (s2[i + prefix_length] != s1[i]) {
-            return 0;
+    else if (token1 == NULL && token2 != NULL){
+        token2 += 1;
+        if (!strcmp(input_file, token2)){
+            return ERROR_THE_SAME_FILE;
         }
     }
-
-    return 1;
+    else if (token1 != NULL && token2 == NULL){
+        token1 += 1;
+        if (!strcmp(token1, output_file)){
+            return ERROR_THE_SAME_FILE;
+        }
+    }
+    else if (token1 == NULL && token2 == NULL){
+        if (!strcmp(input_file, output_file)){
+            return ERROR_THE_SAME_FILE;
+        }
+    }
+    return SUCCESS;
 }
 
 int main(int argc, char *argv[]) {
@@ -170,11 +169,10 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Usage: %s <input_file> <output_file>\n", argv[0]);
         return 1;
     }
-    if (argv[1] == argv[2] || f1(argv[1], argv[2])) {
+    if (is_same_file(argv[1], argv[2]) == ERROR_THE_SAME_FILE) {
         fprintf(stderr, "Error: Input and output files must be different.\n");
         return 1;
     }
-
 
     int tmp = f(argv[1], argv[2]);
 
