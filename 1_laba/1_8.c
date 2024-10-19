@@ -48,13 +48,14 @@ long long convert_to_decimal(const char *str, int base) {
         int digit = 0;
         if (isdigit(str[i])) {
             digit = str[i] - '0';
-        } else if((str[i] - '0' >= 49 && str[i] <= 74) || (str[i] - '0' >= 17 && str[i] <= 42)){
+        } else if((str[i] - '0' >= 49 && str[i] - '0' <= 74) || (str[i] - '0' >= 17 && str[i] - '0' <= 42)){
             digit = tolower(str[i]) - 'a' + 10;
+
         }
         if (flag){
             if (decimal < LLONG_MIN + llabs(digit * power)) {
                 errno = ERANGE;
-                printf("%d \n", decimal > LLONG_MAX + llabs(digit * power));
+                // printf("%d \n", decimal > LLONG_MAX + llabs(digit * power));
 
                 return -1;
             }
@@ -62,17 +63,17 @@ long long convert_to_decimal(const char *str, int base) {
         else{
             if (decimal > LLONG_MAX  - llabs(digit * power) || (decimal == LLONG_MAX / base && digit > LLONG_MAX % base)) {
                 errno = ERANGE;
-                printf("%d \n", decimal > LLONG_MAX + llabs(digit * power));
+                // printf("%d \n", decimal > LLONG_MAX + llabs(digit * power));
 
                 return -1;
             }
         }
         decimal += digit * power;
-        printf("%lld\n", decimal);
+        // printf("%lld\n", decimal);
 
         if ((flag && i > 1) || (!flag && i)){
             if (power > LLONG_MAX / base || power < LLONG_MIN / base) {
-                printf("%d %d z\n", length, i);
+                // printf("%d %d z\n", length, i);
                 errno = ERANGE;
                 return -1;
             }
@@ -118,6 +119,7 @@ int f(const char *name_input_file, const char *name_output_file){
         }
 
         long long decimal_value = convert_to_decimal(number_str + i, min_base);
+//        printf("%lld\n", decimal_value);
         if (decimal_value == -1 && errno == ERANGE) {
             fprintf(stderr, "Overflow detected for number: %s\n", number_str);
             continue;
@@ -132,30 +134,12 @@ int f(const char *name_input_file, const char *name_output_file){
 }
 
 int is_same_file(char *input_file, char *output_file) {
-
-    char *token1 = strrchr(input_file, '/');
-    char *token2 = strrchr(output_file, '/');
-    if (token1 != NULL && token2 != NULL){
-        token1 += 1;
-        token2 += 1;
-        if (!strcmp(token1, token2)){
-            return ERROR_THE_SAME_FILE;
-        }
-    }
-    else if (token1 == NULL && token2 != NULL){
-        token2 += 1;
-        if (!strcmp(input_file, token2)){
-            return ERROR_THE_SAME_FILE;
-        }
-    }
-    else if (token1 != NULL && token2 == NULL){
-        token1 += 1;
-        if (!strcmp(token1, output_file)){
-            return ERROR_THE_SAME_FILE;
-        }
-    }
-    else if (token1 == NULL && token2 == NULL){
-        if (!strcmp(input_file, output_file)){
+    char buf1[PATH_MAX];
+    char *res1 = realpath(input_file, buf1);
+    char buf2[PATH_MAX];
+    char *res2 = realpath(output_file, buf2);
+    if (res1 != NULL && res2 != NULL){
+        if (!strcmp(res1, res2)){
             return ERROR_THE_SAME_FILE;
         }
     }
@@ -171,8 +155,9 @@ int main(int argc, char *argv[]) {
     }
     if (is_same_file(argv[1], argv[2]) == ERROR_THE_SAME_FILE) {
         fprintf(stderr, "Error: Input and output files must be different.\n");
-        return 1;
+        return ERROR_THE_SAME_FILE;
     }
+
 
     int tmp = f(argv[1], argv[2]);
 

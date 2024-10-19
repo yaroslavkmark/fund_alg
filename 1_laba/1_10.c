@@ -149,7 +149,7 @@ int main() {
     printf("Введите числа (для завершения введите Stop):\n");
 
     while (1) {
-        scanf("%s", str);
+        scanf("%99s", str);
 
         if (str[0] == 'S' && str[1] == 't' && str[2] == 'o' && str[3] == 'p') {
             break;
@@ -182,6 +182,7 @@ int main() {
     remove_leading_zeros(max_str);
     printf("Максимальное по модулю число: %s\n", max_str);
     free(max_str);
+
 
     int bases[] = {9, 18, 27, 36};
     int num_bases = sizeof(bases) / sizeof(bases[0]);
