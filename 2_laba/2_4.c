@@ -47,6 +47,11 @@ callback is_convex(int *res, int count, ...) {
     }
     va_end(args);
 
+    if (cords[count - 1].x != cords[0].x || cords[count - 1].y != cords[0].y){
+        *res = 0;
+        return SUCCESS;
+    }
+
     int sign = 0;
 
     for (int i = 0; i < count; i++) {
@@ -270,10 +275,10 @@ int main() {
 
         case SUCCESS:
             if (res){
-                printf("is Convex");
+                printf("is Convex\n");
             }
             else{
-                printf("is not Convex");
+                printf("is not Convex\n");
             }
             break;
     }
