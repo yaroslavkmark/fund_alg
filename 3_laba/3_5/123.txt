@@ -1,0 +1,5 @@
+123 Vasya Pupkin 52 5 4 5 4 5
+125 Vasya Pupkin 53 4 4 2 4 5
+100 Qwe rrrr 12 2 3 4 3 2
+80 bbbb aaaaa 100 3 3 3 3 3
+33 dddf ghff 105 4 4 4 4 4

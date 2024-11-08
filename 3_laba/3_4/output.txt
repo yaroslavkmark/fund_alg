@@ -1,0 +1,166 @@
+		 Part 1
+123123 6
+123123 6
+123123 6
+123123123123 12
+Copied to new string: 123123123123, Length: 12
+123123 6
+123123123123 12
+123123123123 12
+6 <- Если отриц то первая меньше чем вторая если положит то вторая больше первой
+<123123123123> == <123123123123> Равны
+		 Part 2
+Enter the address of the current post office:
+Enter city: Enter street: Enter building: Enter index:(format: XXXXXX) Enter house number: Enter apartment number: Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+Некорректный ввод. Пожалуйста, попробуйте снова.
+Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+Некорректный ввод. Пожалуйста, попробуйте снова.
+Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+Enter city: Enter street: Enter building: Enter index:(format: XXXXXX) Enter house number: Enter apartment number: Enter mail weight: Enter postal index:(14 digits) Enter create time(format: dd:MM:yyyy hh:mm:ss): Enter getting time(format: dd:MM:yyyy hh:mm:ss): Goooooal
+Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+Enter postal index:(14 digits) City: 1234
+Street: 1235
+Building: 1236
+Index: 112213
+Apartment number: 1238
+House number: 1231237
+Weight: 12.000000
+Postal index: 11111111111111
+Create time: 12:12:2020 12:12:12
+Getting time: 13:12:2020 12:12:12
+Goooooal
+Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+No delivered
+Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+City: 1234
+Street: 1235
+Building: 1236
+Index: 112213
+Apartment number: 1238
+House number: 1231237
+Weight: 12.000000
+Postal index: 11111111111111
+Create time: 12:12:2020 12:12:12
+Getting time: 13:12:2020 12:12:12
+
+Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+Enter postal index:(14 digits) Enter 1 if delivered, or 0 if not delivered: Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+City: 1234
+Street: 1235
+Building: 1236
+Index: 112213
+Apartment number: 1238
+House number: 1231237
+Weight: 12.000000
+Postal index: 11111111111111
+Create time: 12:12:2020 12:12:12
+Getting time: 13:12:2020 12:12:12
+
+Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+Enter postal index:(14 digits) Enter 1 if delivered, or 0 if not delivered: Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+No delivered
+Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+Enter postal index:(14 digits) Goooooal
+Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+No delivered
+Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End
+No delivered
+Choose one
+1. Add mail
+2. Delete mail
+3. Search mail
+4. Search for delivered packages
+5. Search for sent overdue packages
+6. Change delivered
+0. End

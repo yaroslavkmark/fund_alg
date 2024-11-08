@@ -1,0 +1,317 @@
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+Enter ID: ID: 123
+Name: Vasya
+surname: Pupkin
+Group: 52
+Marks: 5 4 5 4 5
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+Enter ID: the specified flag is not in the data
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+Enter surname: Stud 1:
+ID: 123
+Name: Vasya
+surname: Pupkin
+Group: 52
+Marks: 5 4 5 4 5
+
+Stud 2:
+ID: 125
+Name: Vasya
+surname: Pupkin
+Group: 53
+Marks: 4 4 2 4 5
+
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+Enter name: Stud 1:
+ID: 123
+Name: Vasya
+surname: Pupkin
+Group: 52
+Marks: 5 4 5 4 5
+
+Stud 2:
+ID: 125
+Name: Vasya
+surname: Pupkin
+Group: 53
+Marks: 4 4 2 4 5
+
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+Enter group: Stud 1:
+ID: 125
+Name: Vasya
+surname: Pupkin
+Group: 53
+Marks: 4 4 2 4 5
+
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+SUCCESS
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+33 dddf ghff 105 4 4 4 4 4
+80 bbbb aaaaa 100 3 3 3 3 3
+100 Qwe rrrr 12 2 3 4 3 2
+123 Vasya Pupkin 52 5 4 5 4 5
+125 Vasya Pupkin 53 4 4 2 4 5
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+SUCCESS
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+123 Vasya Pupkin 52 5 4 5 4 5
+125 Vasya Pupkin 53 4 4 2 4 5
+80 bbbb aaaaa 100 3 3 3 3 3
+33 dddf ghff 105 4 4 4 4 4
+100 Qwe rrrr 12 2 3 4 3 2
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+SUCCESS
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+100 Qwe rrrr 12 2 3 4 3 2
+123 Vasya Pupkin 52 5 4 5 4 5
+125 Vasya Pupkin 53 4 4 2 4 5
+80 bbbb aaaaa 100 3 3 3 3 3
+33 dddf ghff 105 4 4 4 4 4
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+SUCCESS
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+80 bbbb aaaaa 100 3 3 3 3 3
+33 dddf ghff 105 4 4 4 4 4
+100 Qwe rrrr 12 2 3 4 3 2
+123 Vasya Pupkin 52 5 4 5 4 5
+125 Vasya Pupkin 53 4 4 2 4 5
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+Enter ID: SUCCESS
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+Enter output file: IS SAME FILE
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+Enter output file: SUCCESS
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+Некорректный ввод. Пожалуйста, попробуйте снова.
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
+Некорректный ввод. Пожалуйста, попробуйте снова.
+Choose one
+1. Search by ID
+2. Search by surname
+3. Search by name
+4. Search by group
+5. Sort by ID
+6. Sort by surname
+7. Sort by name
+8. Sort by group
+9. Move student information to a file
+s. move information about an above-average student to a file
+q. print all students
+0. End
