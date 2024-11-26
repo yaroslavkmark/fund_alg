@@ -159,8 +159,8 @@ int main(){
                                     printf("\n");
                                 }
 
-                                free(delivered);
                             }
+                            free(delivered);
                         }
                         break;
 
@@ -179,8 +179,9 @@ int main(){
                                     print_mail(&overdue[i]);
                                     printf("\n");
                                 }
-                                free(overdue);
                             }
+                            free(overdue);
+
                         }
                         break;
 

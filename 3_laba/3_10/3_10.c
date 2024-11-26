@@ -52,10 +52,9 @@ int main(int argc, char *argv[]) {
 
         printTree(outputFile, root, 0);
         fprintf(outputFile, "\n");
-
+        free(line);
         freeTree(root);
     }
-
     fclose(inputFile);
     fclose(outputFile);
 

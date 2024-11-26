@@ -320,7 +320,8 @@ callback above_average(Student *data, int size, char *file){
 void del_stud_data(Student *student, int size){
     if (!student)
         return;
-
-    free(student->marks);
+    for (int i = 0; i < size; ++i){
+        free(student[i].marks);
+    }
     free(student);
 }
